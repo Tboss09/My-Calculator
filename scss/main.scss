@@ -1,29 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-   display: flex;
+
+body {
+    display: flex;
     width: 100vw;
-   height: 100vh;
-   align-items: center;
-   justify-content: center;
-   background: linear-gradient(90deg, rgba(7,37,97,1), rgba(7,37,97,0.1));
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(7, 37, 97, 1), rgba(7, 37, 97, 0.1));
 
 }
 
-.container{
+.container {
     display: block;
     width: 280px;
     height: 100vh;
     padding: 10px;
     background: #f0f0f0;
     border-radius: 5px;
-    box-shadow: 4px 4px 15px rgba(5,5,5, .35);
+    box-shadow: 4px 4px 15px rgba(5, 5, 5, .35);
 }
 
-.screen{
+.screen {
     display: flex;
     width: 100%;
     height: 60px;
@@ -32,27 +33,40 @@ body{
     color: #6a6a6a;
     background: #f0f0f0;
     border-radius: 5px;
-   box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 1), inset 3px 3px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 1), inset 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 
-.input{
+.input {
     display: flex;
     width: 100%;
     height: 50%;
     align-items: center;
     font-size: 1.9rem;
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        span{
+            font-size: 1.2rem;
+        }
+    }
 }
 
-.results{
+
+.results {
     display: block;
-    width: 100px;
+
+    // width: 100px;
     height: 50px;
     text-align: right;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-span{
+span {
     display: block;
     text-align: center;
     padding: 6px;
@@ -61,7 +75,7 @@ span{
 }
 
 .btn,
-.operator{
+.operator {
     display: flex;
     width: 60px;
     height: 60px;
@@ -78,14 +92,7 @@ span{
     box-shadow: inset -3px -3px 5px rgba(255, 255, 255, 0.9), inset 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-.btn:nth-child(1)
-.btn:nth-child(2)
-.btn:nth-child(3)
-.btn:nth-child(4)
-.operator:nth-child(8)
-.operator:nth-child(12)
-.operator:nth-child(16)
-.operator:nth-child(20){
+.btn:nth-child(1) .btn:nth-child(2) .btn:nth-child(3) .btn:nth-child(4) .operator:nth-child(8) .operator:nth-child(12) .operator:nth-child(16) .operator:nth-child(20) {
     box-shadow: -3px -3px 6px rgba(255, 255, 255, 0.9), 2px 2px 2px rgba(0, 0, 0, 0.9);
     color: rgba(255, 07, 07, 1);
 }

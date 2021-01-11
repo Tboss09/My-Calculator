@@ -10,10 +10,15 @@
 
 <body>
     <div class="container">
+        <div class="hiddenDiv"></div>
         <div class="head">
             <div class="screen">
-                <div class="input"></div>
-                <div class="results">0</div>
+                <div class="input">
+                    <p>0</p>
+                </div>
+                <div class="results">
+                    <p>0 </p>
+                </div>
             </div>
             <span>Darlington's calculator</span>
         </div>
@@ -22,7 +27,7 @@
             <!-- Hi, If you noticed,  i Used data-'' attribute(data-number,data-symbol,etc), 
                 it works just like . and # works in css, i used it to group elements together  -->
 
-            <button class="btn" id="del" data-symbol="clear">AC</button>
+            <button class="btn" id="del" data-clear="clear">AC</button>
 
             <button class="btn" id="(" data-symbol='lft-bracket'>(</button>
             <button class="btn" id=")" data-symbol="rght-bracket">)</button>
@@ -47,9 +52,8 @@
 
             <button class="operator" id="-" data-symbol="minus">&minus;</button>
             <button class="btn" id="0" data-number="0">0</button>
-
-            <button class="btn" id="." data-symbol="dot">&dot;</button>
-            <button class="btn" id="=" data-equal="equal">&equals;</button>
+            <button class="btn" id=". " data-dot="dot">&dot;</button>
+            <button class="btn" id="=" data-symbol="equal">&equals;</button>
 
             <button class="btn" id="+" data-symbol="plus">&plus;</button>
 
