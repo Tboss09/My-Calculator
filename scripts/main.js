@@ -1,20 +1,17 @@
-const keys = document.querySelector('.keyboard');
-const calculator = document.querySelector(".screen");
-const display = document.querySelector('.input p')
-// const result = document.querySelector('.results p')
-var item = [];
-// NOTE: 
-// This is the final source code file for a blog post "How to build a calculator". You can follow the lesson at https://zellwk.com/blog/calculator-part-2
+const keyboard = document.querySelector('.keyboard');
 
-// # START EDITING YOUR JAVASCRIPT HERE
-// ===============
+const calculator = document.querySelector(".screen"); //Gonna store some variables
+const display = document.querySelector('.input p') //Display what is typed in and also answer
+
+
+
 const calculate = (n1, operator, n2) => {
     let result = ''
-    if (operator === 'add') {
+    if (operator === 'add') { //If add button was clicked
         result = parseFloat(n1) + parseFloat(n2)
-    } else if (operator === 'subtract') {
+    } else if (operator === 'subtract') { //If subtract button was clicked
         result = parseFloat(n1) - parseFloat(n2)
-    } else if (operator === 'multiply') {
+    } else if (operator === 'multiply') { //If multiply button was clicked
         result = parseFloat(n1) * parseFloat(n2)
     } else if (operator === 'divide') {
         result = parseFloat(n1) / parseFloat(n2)
@@ -24,14 +21,16 @@ const calculate = (n1, operator, n2) => {
 }
 
 
-keys.addEventListener('click', e => {
-    if (e.target.matches('button')) {
-        const key = e.target
-        const action = key.dataset.action
-        const keyContent = key.textContent
+keyboard.addEventListener('click', e => {
+    if (e.target.matches('button')) { //If a button is clicked;
+        const buttonClicked = e.target //Button that was clicked
+        const action = buttonClicked.dataset.action
+        const keyContent = buttonClicked.textContent
         const displayedNum = display.textContent
         const previousKeyType = calculator.dataset.previousKeyType
-        if (!action) {
+
+        if (!action) { 
+            //if any of the number button was clicked; 
             if (
                 displayedNum === '0' ||
                 previousKeyType === 'operator' ||
@@ -45,7 +44,9 @@ keys.addEventListener('click', e => {
         }
 
         if (action === 'decimal') {
+                //if (".") button was clicked
             if (!displayedNum.includes('.')) {
+                // if the display text included (".") dont add again
                 display.textContent = displayedNum + '.'
             } else if (
                 previousKeyType === 'operator' ||
@@ -53,7 +54,6 @@ keys.addEventListener('click', e => {
             ) {
                 display.textContent = '0.'
             }
-
             calculator.dataset.previousKeyType = 'decimal'
         }
 
@@ -72,7 +72,10 @@ keys.addEventListener('click', e => {
                 operator &&
                 previousKeyType !== 'operator' &&
                 previousKeyType !== 'calculate'
-            ) {
+            )
+            
+                // THis calculates it
+            {
                 const calcValue = calculate(firstValue, operator, secondValue)
                 display.textContent = calcValue
                 calculator.dataset.firstValue = calcValue
@@ -80,7 +83,7 @@ keys.addEventListener('click', e => {
                 calculator.dataset.firstValue = displayedNum
             }
 
-            key.classList.add('is-depressed')
+            buttonClicked.classList.add('is-depressed')
             calculator.dataset.previousKeyType = 'operator'
             calculator.dataset.operator = action
         }
