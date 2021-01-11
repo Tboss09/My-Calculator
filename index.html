@@ -14,49 +14,48 @@
         <div class="head">
             <div class="screen">
                 <div class="input">
-                    <p>0</p>
+                    <p>0</p>   
                 </div>
-                <div class="results">
-                    <p>0 </p>
-                </div>
+                
             </div>
             <span>Darlington's calculator</span>
         </div>
         <div class="keyboard">
 
-            <!-- Hi, If you noticed,  i Used data-'' attribute(data-number,data-symbol,etc), 
+            <!-- Hi, If you noticed,  i Used data-'' attribute(,data-action,etc), 
                 it works just like . and # works in css, i used it to group elements together  -->
 
-            <button class="btn" id="del" data-clear="clear">AC</button>
+            <button class="btn" id="del" data-action="clear">AC</button>
 
-            <button class="btn" id="(" data-symbol='lft-bracket'>(</button>
-            <button class="btn" id=")" data-symbol="rght-bracket">)</button>
+            <button class="btn" id="(" data-action='lft-bracket'>(</button>
+            <button class="btn" id=")" data-action="rght-bracket">)</button>
 
-            <button class="btn" id="return" data-symbol="return">&Larr;</button>
-            <button class="btn" id="7" data-number="7">7</button>
+            <button class="btn" id="return" data-action="return">&Larr;</button>
+            <button class="btn" id="7">7</button>
 
-            <button class="btn" id="8" data-number="8">8</button>
-            <button class="btn" id="9" data-number="9">9</button>
+            <button class="btn" id="8">8</button>
+            <button class="btn" id="9">9</button>
 
-            <button class="operator" id="*" data-symbol="multiply">&times;</button>
-            <button class="btn" id="4" data-number="4">4</button>
+            <button class="operator" id="*" data-action="multiply">&times;</button>
+            <button class="btn" id="4">4</button>
 
-            <button class="btn" id="5" data-number="5">5</button>
-            <button class="btn" id="6" data-number="6">6</button>
+            <button class="btn" id="5">5</button>
+            <button class="btn" id="6">6</button>
 
-            <button class="operator" id="/" data-symbol='divide'>&divide;</button>
-            <button class="btn" id="1" data-number="1">1</button>
+            <button class="operator" id="/" data-action='divide'>&divide;</button>
+            <button class="btn" id="1">1</button>
 
-            <button class="btn" id="2" data-number="2">2</button>
-            <button class="btn" id="3" data-number="3">3</button>
+            <button class="btn" id="2">2</button>
+            <button class="btn" id="3">3</button>
 
-            <button class="operator" id="-" data-symbol="minus">&minus;</button>
-            <button class="btn" id="0" data-number="0">0</button>
-            <button class="btn" id=". " data-dot="dot">&dot;</button>
-            <button class="btn" id="=" data-symbol="equal">&equals;</button>
+            <button class="operator" id="-" data-action="subtract">&minus;</button>
+            <button class="btn" id="0">0</button>
 
-            <button class="btn" id="+" data-symbol="plus">&plus;</button>
+            <button class="btn" id=". " data-action="decimal">&dot;</button>
+            <button class="btn" id="=" data-action="calculate">&equals;</button>
 
+            <button class="btn" id="+" data-action="add">&plus;</button>
+ 
 
         </div>
     </div>
